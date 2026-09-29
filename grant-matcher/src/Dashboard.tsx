@@ -307,10 +307,10 @@ function Sidebar() {
 
 function Header({ profile }: { profile: CompanyProfile }) {
   return (
-    <header className="sticky top-0 z-10 flex h-14 items-center justify-between border-b border-zinc-200 bg-white/80 px-6 backdrop-blur">
+    <header className="sticky top-0 z-10 flex h-14 items-center justify-between gap-3 border-b border-zinc-200 bg-white/80 px-4 backdrop-blur sm:px-6">
       <div className="flex items-center gap-2 text-sm">
-        <span className="text-zinc-400">ワークスペース</span>
-        <span className="text-zinc-300">/</span>
+        <span className="hidden text-zinc-400 sm:inline">ワークスペース</span>
+        <span className="hidden text-zinc-300 sm:inline">/</span>
         <span className="font-medium text-zinc-900">ダッシュボード</span>
       </div>
 
@@ -320,7 +320,7 @@ function Header({ profile }: { profile: CompanyProfile }) {
           <span>検索は不要です — AIが自動で探します</span>
         </div>
         <div className="flex items-center gap-3">
-          <div className="text-right leading-tight">
+          <div className="hidden text-right leading-tight sm:block">
             <div className="text-[13px] font-medium text-zinc-900">{profile.company_name}</div>
             <div className="text-[11px] text-zinc-500">
               {profile.industry_detail} · {profile.employee_count}名
@@ -413,7 +413,7 @@ function GrantCard({
 
   return (
     <article className="group rounded-xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition hover:border-zinc-300 hover:shadow-[0_4px_16px_-4px_rgba(0,0,0,0.08)]">
-      <div className="flex gap-6 p-5">
+      <div className="flex flex-col gap-5 p-5 sm:flex-row sm:gap-6">
         {/* Left: title + AI summary */}
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-2">
@@ -451,9 +451,9 @@ function GrantCard({
         </div>
 
         {/* Right: match + amount */}
-        <div className="flex w-40 shrink-0 flex-col items-end justify-between border-l border-zinc-100 pl-6">
+        <div className="flex shrink-0 flex-row items-center justify-between border-zinc-100 sm:w-40 sm:flex-col sm:items-end sm:border-l sm:pl-6">
           <MatchRing score={score} />
-          <div className="mt-4 text-right">
+          <div className="text-right sm:mt-4">
             <div className="text-[11px] text-zinc-500">
               {grant.kind === 'tender' ? '予定価格' : '上限額'}
             </div>
@@ -584,7 +584,7 @@ export default function Dashboard() {
         <Header profile={company} />
 
         <main className="flex-1 overflow-y-auto">
-          <div className="mx-auto max-w-5xl px-6 py-8">
+          <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <h1 className="text-xl font-semibold tracking-tight text-zinc-900">
@@ -611,7 +611,7 @@ export default function Dashboard() {
               <StatTile label="今週AIが解析した公募要領" value="1,284件" sub="国・47都道府県・主要市区町村" />
             </div>
 
-            <div className="mt-8 flex items-center justify-between">
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-2">
               <div className="inline-flex rounded-lg border border-zinc-200 bg-white p-0.5">
                 {FILTERS.map((f) => (
                   <button
