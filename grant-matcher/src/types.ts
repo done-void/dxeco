@@ -109,6 +109,42 @@ export interface AiSummary {
   requirement: string; // 必須要件
 }
 
+// ---------------------------------------------------------------------------
+// 申請ガイド（AI 抽出）
+// ---------------------------------------------------------------------------
+
+export type SubmissionChannel = 'jgrants' | 'prefecture_portal' | 'e_bidding' | 'paper';
+
+/** 書類の入手先 */
+export type DocumentSource =
+  | 'applicant' // 自社で用意・作成
+  | 'legal_affairs_bureau' // 法務局
+  | 'tax_office' // 税務署・都税事務所
+  | 'vendor' // 取引先（見積書など）
+  | 'municipality' // 自治体窓口
+  | 'gbiz'; // GビズID 等のオンライン手続き
+
+export interface RequiredDocument {
+  id: string;
+  name: string;
+  source: DocumentSource;
+  lead_days: number; // 入手・作成に必要な目安日数
+  note: string;
+  /**
+   * 申請者が内容を作成する書類か。
+   * 他人が報酬を得て作成できるのは行政書士のみ（改正行政書士法, 2026年1月施行）。
+   */
+  drafting: boolean;
+  optional: boolean;
+}
+
+export interface ApplicationGuide {
+  channel: SubmissionChannel;
+  documents: RequiredDocument[];
+  /** 提携行政書士への引き継ぎが可能か（入札は自社作成のため false） */
+  handoff_available: boolean;
+}
+
 export interface GrantItem {
   id: string; // uuid (PK)
   kind: GrantKind;
@@ -127,6 +163,7 @@ export interface GrantItem {
   application_start: string | null;
   deadline: string; // 申請・入札締切
   tags: string[];
+  application: ApplicationGuide; // jsonb — AI が公募要領から抽出した提出方法・必要書類
   ai_model: string;
   ai_confidence: number; // 0〜1、抽出結果の自己評価
   ai_extracted_at: string;
@@ -144,6 +181,8 @@ export interface MatchCheck {
   passed: boolean;
   detail: string; // 例: "15名 ≤ 上限300名"
   weight: number;
+  /** 未充足の場合に取るべき行動 */
+  action?: string;
 }
 
 export interface GrantMatch {
@@ -153,4 +192,34 @@ export interface GrantMatch {
   checks: MatchCheck[]; // jsonb
   notified_at: string | null;
   created_at: string;
+}
+
+// ---------------------------------------------------------------------------
+// application_preps テーブル（申請準備の進捗）
+// ---------------------------------------------------------------------------
+
+export type PrepStatus = 'todo' | 'doing' | 'done';
+
+export interface ApplicationPrep {
+  id: string;
+  company_id: string;
+  grant_id: string;
+  document_status: Record<string, PrepStatus>; // jsonb: RequiredDocument.id -> 状態
+  handoff_partner_id: string | null;
+  handoff_requested_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+// ---------------------------------------------------------------------------
+// partner_offices テーブル（提携行政書士事務所）
+// ---------------------------------------------------------------------------
+
+export interface PartnerOffice {
+  id: string;
+  name: string;
+  prefecture: string;
+  specialties: string[];
+  typical_response_hours: number;
+  accepts_online: boolean;
 }

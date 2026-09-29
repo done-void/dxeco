@@ -36,6 +36,7 @@ create table public.grants (
   application_start date,
   deadline          timestamptz not null,
   tags              text[] not null default '{}',
+  application       jsonb not null,            -- ApplicationGuide（提出方法・必要書類）
   ai_model          text not null,
   ai_confidence     real not null check (ai_confidence between 0 and 1),
   ai_extracted_at   timestamptz not null,
@@ -58,10 +59,34 @@ create table public.grant_matches (
 
 create index grant_matches_company_score_idx on public.grant_matches (company_id, score desc);
 
+-- 提携行政書士事務所。HojoRadar は書類作成を行わず、引き継ぎのみ行う。
+create table public.partner_offices (
+  id                     uuid primary key default gen_random_uuid(),
+  name                   text not null,
+  prefecture             text not null,
+  specialties            text[] not null default '{}',
+  typical_response_hours smallint not null,
+  accepts_online         boolean not null default true
+);
+
+create table public.application_preps (
+  id                   uuid primary key default gen_random_uuid(),
+  company_id           uuid not null references public.companies (id) on delete cascade,
+  grant_id             uuid not null references public.grants (id) on delete cascade,
+  document_status      jsonb not null default '{}',   -- { [document_id]: 'todo' | 'doing' | 'done' }
+  handoff_partner_id   uuid references public.partner_offices (id),
+  handoff_requested_at timestamptz,
+  created_at           timestamptz not null default now(),
+  updated_at           timestamptz not null default now(),
+  unique (company_id, grant_id)
+);
+
 -- RLS: 自社データのみ参照可能。grants は全ログインユーザーに公開。
 alter table public.companies     enable row level security;
 alter table public.grants        enable row level security;
 alter table public.grant_matches enable row level security;
+alter table public.partner_offices   enable row level security;
+alter table public.application_preps enable row level security;
 
 create policy "own company" on public.companies
   for all using (owner_user_id = auth.uid());
@@ -71,5 +96,13 @@ create policy "grants readable" on public.grants
 
 create policy "own matches" on public.grant_matches
   for select using (
+    company_id in (select id from public.companies where owner_user_id = auth.uid())
+  );
+
+create policy "partners readable" on public.partner_offices
+  for select to authenticated using (true);
+
+create policy "own preps" on public.application_preps
+  for all using (
     company_id in (select id from public.companies where owner_user_id = auth.uid())
   );

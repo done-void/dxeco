@@ -12,9 +12,22 @@
     "employee_count": 15,
     "founded_on": "2016-04-01",
     "annual_revenue_jpy": 180000000,
-    "purposes": ["dx", "hiring", "sales_expansion", "public_contract"],
-    "keywords": ["Webサイト制作", "CMS", "アクセシビリティ", "自治体DX"],
-    "certifications": ["gbiz_id_prime", "security_action_2star"],
+    "purposes": [
+      "dx",
+      "hiring",
+      "sales_expansion",
+      "public_contract"
+    ],
+    "keywords": [
+      "Webサイト制作",
+      "CMS",
+      "アクセシビリティ",
+      "自治体DX"
+    ],
+    "certifications": [
+      "gbiz_id_prime",
+      "security_action_2star"
+    ],
     "plan": "pro",
     "notify_threshold": 70,
     "created_at": "2026-04-12T10:21:00+09:00",
@@ -24,13 +37,15 @@
     {
       "id": "a3e1c7d2-0f4b-4a8e-9c13-5b7d2e6f0a91",
       "kind": "subsidy",
-      "title": "IT導入補助金 2026（通常枠）",
+      "title": "デジタル化・AI導入補助金 2026（通常枠）",
       "agency": "中小企業基盤整備機構",
       "status": "open",
       "raw": {
-        "source_url": "https://example.go.jp/it-hojo/2026/tsujo",
-        "document_urls": ["https://example.go.jp/it-hojo/2026/koubo_youryou_tsujo.pdf"],
-        "raw_title": "令和8年度 中小企業生産性革命推進事業 サービス等生産性向上IT導入支援事業費補助金（通常枠）交付申請の公募について",
+        "source_url": "https://example.go.jp/digital-ai-hojo/2026/tsujo",
+        "document_urls": [
+          "https://example.go.jp/digital-ai-hojo/2026/koubo_youryou_tsujo.pdf"
+        ],
+        "raw_title": "令和8年度 中小企業デジタル化・AI導入支援事業費補助金（通常枠）交付申請の公募について",
         "raw_text_excerpt": "本事業の補助対象者は、中小企業・小規模事業者等（別表１に定める資本金又は常勤従業員数の要件を満たす者）であって、交付申請時点においてgBizIDプライムを取得し、独立行政法人情報処理推進機構が実施する「SECURITY ACTION」の「★一つ星」又は「★★二つ星」いずれかの宣言を行っていること……",
         "content_hash": "sha256:5f1c0e7a9b2d4c6e8f0a1b3c5d7e9f1a2b4c6d8e0f1a3b5c7d9e1f2a4b6c8d0e",
         "fetched_at": "2026-09-29T05:12:00+09:00"
@@ -38,7 +53,7 @@
       "ai_summary": {
         "target": "従業員300人以下（IT業）の中小企業。業種は問わない",
         "amount": "最大450万円・費用の1/2を補助",
-        "requirement": "登録済みITツールの導入＋gBizIDプライム＋SECURITY ACTION宣言"
+        "requirement": "登録済みのAI・ITツールの導入＋gBizIDプライム＋SECURITY ACTION宣言"
       },
       "eligibility": {
         "industries": "any",
@@ -46,14 +61,74 @@
         "max_employees": 300,
         "max_capital_jpy": 300000000,
         "min_years_in_business": null,
-        "purposes": ["dx"],
-        "required_certifications": ["gbiz_id_prime", "security_action_1star"]
+        "purposes": [
+          "dx"
+        ],
+        "required_certifications": [
+          "gbiz_id_prime",
+          "security_action_1star"
+        ]
       },
       "max_amount_jpy": 4500000,
       "subsidy_rate": "1/2",
       "application_start": "2026-09-15",
       "deadline": "2026-10-30T17:00:00+09:00",
-      "tags": ["DX", "ITツール", "通年公募"],
+      "tags": [
+        "DX",
+        "AI・ITツール",
+        "通年公募"
+      ],
+      "application": {
+        "channel": "jgrants",
+        "handoff_available": true,
+        "documents": [
+          {
+            "id": "a-gbiz",
+            "name": "GビズIDプライム",
+            "source": "gbiz",
+            "lead_days": 0,
+            "note": "取得済み（プロフィールより）",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "a-reg",
+            "name": "履歴事項全部証明書",
+            "source": "legal_affairs_bureau",
+            "lead_days": 3,
+            "note": "発行から3ヶ月以内のもの。オンライン請求可",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "a-tax",
+            "name": "法人税の納税証明書（その1またはその2）",
+            "source": "tax_office",
+            "lead_days": 5,
+            "note": "e-Taxで電子交付を請求できます",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "a-quote",
+            "name": "ITツールの見積書",
+            "source": "vendor",
+            "lead_days": 7,
+            "note": "IT導入支援事業者が申請マイページに登録",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "a-plan",
+            "name": "事業計画（申請マイページで入力）",
+            "source": "applicant",
+            "lead_days": 10,
+            "note": "導入目的と生産性向上の見込みを記入",
+            "drafting": true,
+            "optional": false
+          }
+        ]
+      },
       "ai_model": "hojo-extractor-v3",
       "ai_confidence": 0.96,
       "ai_extracted_at": "2026-09-29T05:14:00+09:00",
@@ -68,7 +143,9 @@
       "status": "open",
       "raw": {
         "source_url": "https://example.metro.tokyo.lg.jp/sangyo/dx-jinzai-2026",
-        "document_urls": ["https://example.metro.tokyo.lg.jp/sangyo/dx-jinzai-2026/boshu_yoko.pdf"],
+        "document_urls": [
+          "https://example.metro.tokyo.lg.jp/sangyo/dx-jinzai-2026/boshu_yoko.pdf"
+        ],
         "raw_title": "令和8年度 都内中小企業におけるデジタル人材の確保・育成に係る経費の一部助成事業 募集要項（第2回）",
         "raw_text_excerpt": "申請者は、都内に本店又は支店があり、申請日時点で引き続き１年以上事業を営んでいる中小企業者であること。なお、経営革新計画の承認を受けている事業者については審査において加点する……",
         "content_hash": "sha256:9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b",
@@ -81,18 +158,81 @@
       },
       "eligibility": {
         "industries": "any",
-        "prefectures": ["東京都"],
+        "prefectures": [
+          "東京都"
+        ],
         "max_employees": 300,
         "max_capital_jpy": 300000000,
         "min_years_in_business": 1,
-        "purposes": ["hiring", "dx"],
-        "required_certifications": ["gbiz_id_prime", "keiei_kakushin"]
+        "purposes": [
+          "hiring",
+          "dx"
+        ],
+        "required_certifications": [
+          "gbiz_id_prime",
+          "keiei_kakushin"
+        ]
       },
       "max_amount_jpy": 3000000,
       "subsidy_rate": "2/3",
       "application_start": "2026-09-01",
       "deadline": "2026-10-08T17:00:00+09:00",
-      "tags": ["人材育成", "採用", "東京都"],
+      "tags": [
+        "人材育成",
+        "採用",
+        "東京都"
+      ],
+      "application": {
+        "channel": "prefecture_portal",
+        "handoff_available": true,
+        "documents": [
+          {
+            "id": "b-reg",
+            "name": "履歴事項全部証明書",
+            "source": "legal_affairs_bureau",
+            "lead_days": 3,
+            "note": "発行から3ヶ月以内のもの",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "b-tax",
+            "name": "法人事業税・法人都民税の納税証明書",
+            "source": "tax_office",
+            "lead_days": 5,
+            "note": "都税事務所で取得",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "b-quote",
+            "name": "研修費・採用費の見積書",
+            "source": "vendor",
+            "lead_days": 7,
+            "note": "研修会社・求人媒体から取得",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "b-plan",
+            "name": "人材育成・採用計画書",
+            "source": "applicant",
+            "lead_days": 10,
+            "note": "育成するスキルと到達目標を記載",
+            "drafting": true,
+            "optional": false
+          },
+          {
+            "id": "b-kakushin",
+            "name": "経営革新計画の承認書",
+            "source": "municipality",
+            "lead_days": 45,
+            "note": "任意。承認があれば審査で加点",
+            "drafting": true,
+            "optional": true
+          }
+        ]
+      },
       "ai_model": "hojo-extractor-v3",
       "ai_confidence": 0.91,
       "ai_extracted_at": "2026-09-28T06:05:00+09:00",
@@ -122,19 +262,78 @@
         "requirement": "アクセシビリティAA準拠の構築実績が5年以内に1件以上"
       },
       "eligibility": {
-        "industries": ["it_software", "professional_services"],
-        "prefectures": ["東京都", "神奈川県", "埼玉県", "千葉県"],
+        "industries": [
+          "it_software",
+          "professional_services"
+        ],
+        "prefectures": [
+          "東京都",
+          "神奈川県",
+          "埼玉県",
+          "千葉県"
+        ],
         "max_employees": null,
         "max_capital_jpy": null,
         "min_years_in_business": 3,
-        "purposes": ["public_contract", "sales_expansion"],
-        "required_certifications": ["local_bid_qualification"]
+        "purposes": [
+          "public_contract",
+          "sales_expansion"
+        ],
+        "required_certifications": [
+          "local_bid_qualification"
+        ]
       },
       "max_amount_jpy": 12000000,
       "subsidy_rate": null,
       "application_start": "2026-09-25",
       "deadline": "2026-10-20T12:00:00+09:00",
-      "tags": ["入札", "プロポーザル", "アクセシビリティ"],
+      "tags": [
+        "入札",
+        "プロポーザル",
+        "アクセシビリティ"
+      ],
+      "application": {
+        "channel": "e_bidding",
+        "handoff_available": false,
+        "documents": [
+          {
+            "id": "c-qual",
+            "name": "区の競争入札参加資格（情報処理業務）",
+            "source": "municipality",
+            "lead_days": 30,
+            "note": "未取得。随時受付でも登録まで約1ヶ月",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "c-proposal",
+            "name": "企画提案書",
+            "source": "applicant",
+            "lead_days": 14,
+            "note": "評価項目（アクセシビリティ・運用体制）に沿って作成",
+            "drafting": true,
+            "optional": false
+          },
+          {
+            "id": "c-record",
+            "name": "構築実績一覧（AA準拠の案件）",
+            "source": "applicant",
+            "lead_days": 3,
+            "note": "過去5年以内の実績を1件以上",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "c-quote",
+            "name": "見積書",
+            "source": "applicant",
+            "lead_days": 5,
+            "note": "構築費と2年間の保守費を分けて記載",
+            "drafting": false,
+            "optional": false
+          }
+        ]
+      },
       "ai_model": "hojo-extractor-v3",
       "ai_confidence": 0.88,
       "ai_extracted_at": "2026-09-29T04:43:00+09:00",
@@ -149,7 +348,9 @@
       "status": "open",
       "raw": {
         "source_url": "https://example.go.jp/monodukuri/22th",
-        "document_urls": ["https://example.go.jp/monodukuri/22th/koubo_youryou.pdf"],
+        "document_urls": [
+          "https://example.go.jp/monodukuri/22th/koubo_youryou.pdf"
+        ],
         "raw_title": "ものづくり・商業・サービス生産性向上促進補助金 公募要領（第22次締切分）",
         "raw_text_excerpt": "補助対象事業は、革新的な新製品・新サービスの開発又は海外需要開拓を行う事業のために必要な設備・システム投資等であって、3～5年の事業計画期間において、給与支給総額を年平均成長率＋1.5％以上増加させること……",
         "content_hash": "sha256:7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e8d7c6b",
@@ -166,19 +367,118 @@
         "max_employees": 300,
         "max_capital_jpy": 300000000,
         "min_years_in_business": null,
-        "purposes": ["equipment", "rnd"],
-        "required_certifications": ["gbiz_id_prime"]
+        "purposes": [
+          "equipment",
+          "rnd"
+        ],
+        "required_certifications": [
+          "gbiz_id_prime"
+        ]
       },
       "max_amount_jpy": 12500000,
       "subsidy_rate": "1/2",
       "application_start": "2026-10-01",
       "deadline": "2026-11-28T17:00:00+09:00",
-      "tags": ["設備投資", "新サービス", "賃上げ要件"],
+      "tags": [
+        "設備投資",
+        "新サービス",
+        "賃上げ要件"
+      ],
+      "application": {
+        "channel": "jgrants",
+        "handoff_available": true,
+        "documents": [
+          {
+            "id": "d-reg",
+            "name": "履歴事項全部証明書",
+            "source": "legal_affairs_bureau",
+            "lead_days": 3,
+            "note": "発行から3ヶ月以内のもの",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "d-fin",
+            "name": "決算書（直近2期分）",
+            "source": "applicant",
+            "lead_days": 2,
+            "note": "貸借対照表・損益計算書",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "d-tax",
+            "name": "法人税の納税証明書",
+            "source": "tax_office",
+            "lead_days": 5,
+            "note": "e-Taxで電子交付を請求できます",
+            "drafting": false,
+            "optional": false
+          },
+          {
+            "id": "d-plan",
+            "name": "事業計画書（10ページ以内）",
+            "source": "applicant",
+            "lead_days": 21,
+            "note": "新サービスの内容・市場性・収益計画",
+            "drafting": true,
+            "optional": false
+          },
+          {
+            "id": "d-wage",
+            "name": "賃金引上げ計画の表明書",
+            "source": "applicant",
+            "lead_days": 5,
+            "note": "従業員への表明が必要",
+            "drafting": true,
+            "optional": false
+          }
+        ]
+      },
       "ai_model": "hojo-extractor-v3",
       "ai_confidence": 0.93,
       "ai_extracted_at": "2026-09-27T05:58:00+09:00",
       "created_at": "2026-09-27T05:58:00+09:00",
       "updated_at": "2026-09-27T05:58:00+09:00"
+    }
+  ],
+  "partners": [
+    {
+      "id": "p-01",
+      "name": "みなと坂行政書士事務所（ダミー）",
+      "prefecture": "東京都",
+      "specialties": [
+        "デジタル化・AI導入補助金",
+        "ものづくり補助金"
+      ],
+      "typical_response_hours": 24,
+      "accepts_online": true
+    },
+    {
+      "id": "p-02",
+      "name": "さくら通り行政書士法人（ダミー）",
+      "prefecture": "東京都",
+      "specialties": [
+        "東京都の助成金",
+        "人材育成・雇用系"
+      ],
+      "typical_response_hours": 48,
+      "accepts_online": true
+    }
+  ],
+  "preps": [
+    {
+      "id": "e4b0c2d1-7a8f-4e3b-9c6d-2f1a0b9e8d7c",
+      "company_id": "8c1f5a0e-3b7d-4c2a-9e61-0d4b2f7a1c35",
+      "grant_id": "b7d4e2f1-6a3c-4b9d-8e05-1c2f3a4b5d6e",
+      "document_status": {
+        "b-reg": "done",
+        "b-tax": "doing"
+      },
+      "handoff_partner_id": null,
+      "handoff_requested_at": null,
+      "created_at": "2026-09-28T10:02:00+09:00",
+      "updated_at": "2026-09-28T16:40:00+09:00"
     }
   ]
 }
