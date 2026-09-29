@@ -1,0 +1,184 @@
+{
+  "company": {
+    "id": "8c1f5a0e-3b7d-4c2a-9e61-0d4b2f7a1c35",
+    "owner_user_id": "2b6e9d14-7f3a-4e08-b1c5-6a9d0e3f8b72",
+    "company_name": "株式会社ブルーリーフ・デザイン",
+    "corporate_number": "0000000000000",
+    "industry": "it_software",
+    "industry_detail": "Web制作・UI/UXデザイン",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "capital_jpy": 10000000,
+    "employee_count": 15,
+    "founded_on": "2016-04-01",
+    "annual_revenue_jpy": 180000000,
+    "purposes": ["dx", "hiring", "sales_expansion", "public_contract"],
+    "keywords": ["Webサイト制作", "CMS", "アクセシビリティ", "自治体DX"],
+    "certifications": ["gbiz_id_prime", "security_action_2star"],
+    "plan": "pro",
+    "notify_threshold": 70,
+    "created_at": "2026-04-12T10:21:00+09:00",
+    "updated_at": "2026-09-20T15:04:00+09:00"
+  },
+  "grants": [
+    {
+      "id": "a3e1c7d2-0f4b-4a8e-9c13-5b7d2e6f0a91",
+      "kind": "subsidy",
+      "title": "IT導入補助金 2026（通常枠）",
+      "agency": "中小企業基盤整備機構",
+      "status": "open",
+      "raw": {
+        "source_url": "https://example.go.jp/it-hojo/2026/tsujo",
+        "document_urls": ["https://example.go.jp/it-hojo/2026/koubo_youryou_tsujo.pdf"],
+        "raw_title": "令和8年度 中小企業生産性革命推進事業 サービス等生産性向上IT導入支援事業費補助金（通常枠）交付申請の公募について",
+        "raw_text_excerpt": "本事業の補助対象者は、中小企業・小規模事業者等（別表１に定める資本金又は常勤従業員数の要件を満たす者）であって、交付申請時点においてgBizIDプライムを取得し、独立行政法人情報処理推進機構が実施する「SECURITY ACTION」の「★一つ星」又は「★★二つ星」いずれかの宣言を行っていること……",
+        "content_hash": "sha256:5f1c0e7a9b2d4c6e8f0a1b3c5d7e9f1a2b4c6d8e0f1a3b5c7d9e1f2a4b6c8d0e",
+        "fetched_at": "2026-09-29T05:12:00+09:00"
+      },
+      "ai_summary": {
+        "target": "従業員300人以下（IT業）の中小企業。業種は問わない",
+        "amount": "最大450万円・費用の1/2を補助",
+        "requirement": "登録済みITツールの導入＋gBizIDプライム＋SECURITY ACTION宣言"
+      },
+      "eligibility": {
+        "industries": "any",
+        "prefectures": "any",
+        "max_employees": 300,
+        "max_capital_jpy": 300000000,
+        "min_years_in_business": null,
+        "purposes": ["dx"],
+        "required_certifications": ["gbiz_id_prime", "security_action_1star"]
+      },
+      "max_amount_jpy": 4500000,
+      "subsidy_rate": "1/2",
+      "application_start": "2026-09-15",
+      "deadline": "2026-10-30T17:00:00+09:00",
+      "tags": ["DX", "ITツール", "通年公募"],
+      "ai_model": "hojo-extractor-v3",
+      "ai_confidence": 0.96,
+      "ai_extracted_at": "2026-09-29T05:14:00+09:00",
+      "created_at": "2026-09-29T05:14:00+09:00",
+      "updated_at": "2026-09-29T05:14:00+09:00"
+    },
+    {
+      "id": "b7d4e2f1-6a3c-4b9d-8e05-1c2f3a4b5d6e",
+      "kind": "grant",
+      "title": "東京都 中小企業デジタル人材育成助成金",
+      "agency": "東京都 産業労働局",
+      "status": "open",
+      "raw": {
+        "source_url": "https://example.metro.tokyo.lg.jp/sangyo/dx-jinzai-2026",
+        "document_urls": ["https://example.metro.tokyo.lg.jp/sangyo/dx-jinzai-2026/boshu_yoko.pdf"],
+        "raw_title": "令和8年度 都内中小企業におけるデジタル人材の確保・育成に係る経費の一部助成事業 募集要項（第2回）",
+        "raw_text_excerpt": "申請者は、都内に本店又は支店があり、申請日時点で引き続き１年以上事業を営んでいる中小企業者であること。なお、経営革新計画の承認を受けている事業者については審査において加点する……",
+        "content_hash": "sha256:9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a4b3c2d1e0f9a8b",
+        "fetched_at": "2026-09-28T06:03:00+09:00"
+      },
+      "ai_summary": {
+        "target": "都内に拠点があり、創業1年以上の中小企業",
+        "amount": "最大300万円・研修費や採用費の2/3を助成",
+        "requirement": "DX人材の採用または社員研修の計画書を提出（経営革新計画があれば加点）"
+      },
+      "eligibility": {
+        "industries": "any",
+        "prefectures": ["東京都"],
+        "max_employees": 300,
+        "max_capital_jpy": 300000000,
+        "min_years_in_business": 1,
+        "purposes": ["hiring", "dx"],
+        "required_certifications": ["gbiz_id_prime", "keiei_kakushin"]
+      },
+      "max_amount_jpy": 3000000,
+      "subsidy_rate": "2/3",
+      "application_start": "2026-09-01",
+      "deadline": "2026-10-08T17:00:00+09:00",
+      "tags": ["人材育成", "採用", "東京都"],
+      "ai_model": "hojo-extractor-v3",
+      "ai_confidence": 0.91,
+      "ai_extracted_at": "2026-09-28T06:05:00+09:00",
+      "created_at": "2026-09-28T06:05:00+09:00",
+      "updated_at": "2026-09-28T06:05:00+09:00"
+    },
+    {
+      "id": "c9f2a1b8-4e6d-4c3a-a7b2-8d0e1f2a3b4c",
+      "kind": "tender",
+      "title": "区公式Webサイト リニューアル業務委託",
+      "agency": "東京都 目黒台区（ダミー） 広報課",
+      "status": "open",
+      "raw": {
+        "source_url": "https://example.city.lg.jp/nyusatsu/2026/web-renewal",
+        "document_urls": [
+          "https://example.city.lg.jp/nyusatsu/2026/web-renewal/shiyousho.pdf",
+          "https://example.city.lg.jp/nyusatsu/2026/web-renewal/jisshi_youryou.pdf"
+        ],
+        "raw_title": "令和8年度 区公式ホームページ再構築及び運用保守業務委託に係る公募型プロポーザルの実施について",
+        "raw_text_excerpt": "参加資格：本区の競争入札参加資格者名簿（物品・委託）において「情報処理業務」に登録されていること。JIS X 8341-3:2016 適合レベルAAに準拠した構築実績を過去5年以内に1件以上有すること……",
+        "content_hash": "sha256:1e2d3c4b5a6f7e8d9c0b1a2f3e4d5c6b7a8f9e0d1c2b3a4f5e6d7c8b9a0f1e2d",
+        "fetched_at": "2026-09-29T04:40:00+09:00"
+      },
+      "ai_summary": {
+        "target": "区の入札参加資格（情報処理業務）を持つWeb制作会社",
+        "amount": "予定価格 1,200万円（構築＋2年間の保守）",
+        "requirement": "アクセシビリティAA準拠の構築実績が5年以内に1件以上"
+      },
+      "eligibility": {
+        "industries": ["it_software", "professional_services"],
+        "prefectures": ["東京都", "神奈川県", "埼玉県", "千葉県"],
+        "max_employees": null,
+        "max_capital_jpy": null,
+        "min_years_in_business": 3,
+        "purposes": ["public_contract", "sales_expansion"],
+        "required_certifications": ["local_bid_qualification"]
+      },
+      "max_amount_jpy": 12000000,
+      "subsidy_rate": null,
+      "application_start": "2026-09-25",
+      "deadline": "2026-10-20T12:00:00+09:00",
+      "tags": ["入札", "プロポーザル", "アクセシビリティ"],
+      "ai_model": "hojo-extractor-v3",
+      "ai_confidence": 0.88,
+      "ai_extracted_at": "2026-09-29T04:43:00+09:00",
+      "created_at": "2026-09-29T04:43:00+09:00",
+      "updated_at": "2026-09-29T04:43:00+09:00"
+    },
+    {
+      "id": "d1a2b3c4-5e6f-4a7b-8c9d-0e1f2a3b4c5d",
+      "kind": "subsidy",
+      "title": "ものづくり・商業・サービス補助金（第22次）",
+      "agency": "全国中小企業団体中央会",
+      "status": "open",
+      "raw": {
+        "source_url": "https://example.go.jp/monodukuri/22th",
+        "document_urls": ["https://example.go.jp/monodukuri/22th/koubo_youryou.pdf"],
+        "raw_title": "ものづくり・商業・サービス生産性向上促進補助金 公募要領（第22次締切分）",
+        "raw_text_excerpt": "補助対象事業は、革新的な新製品・新サービスの開発又は海外需要開拓を行う事業のために必要な設備・システム投資等であって、3～5年の事業計画期間において、給与支給総額を年平均成長率＋1.5％以上増加させること……",
+        "content_hash": "sha256:7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2b1a0f9e8d7c6b",
+        "fetched_at": "2026-09-27T05:55:00+09:00"
+      },
+      "ai_summary": {
+        "target": "新サービス開発や設備投資を計画している中小企業（全業種）",
+        "amount": "最大1,250万円・費用の1/2を補助（小規模は2/3）",
+        "requirement": "3〜5年の事業計画で賃上げ（給与総額 年+1.5%以上）を約束すること"
+      },
+      "eligibility": {
+        "industries": "any",
+        "prefectures": "any",
+        "max_employees": 300,
+        "max_capital_jpy": 300000000,
+        "min_years_in_business": null,
+        "purposes": ["equipment", "rnd"],
+        "required_certifications": ["gbiz_id_prime"]
+      },
+      "max_amount_jpy": 12500000,
+      "subsidy_rate": "1/2",
+      "application_start": "2026-10-01",
+      "deadline": "2026-11-28T17:00:00+09:00",
+      "tags": ["設備投資", "新サービス", "賃上げ要件"],
+      "ai_model": "hojo-extractor-v3",
+      "ai_confidence": 0.93,
+      "ai_extracted_at": "2026-09-27T05:58:00+09:00",
+      "created_at": "2026-09-27T05:58:00+09:00",
+      "updated_at": "2026-09-27T05:58:00+09:00"
+    }
+  ]
+}
